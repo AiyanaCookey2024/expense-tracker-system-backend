@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Expense
+from .models import Expense, Budget, SalaryPeriod
 
 
 class ExpenseAdmin(admin.ModelAdmin):
@@ -7,6 +7,6 @@ class ExpenseAdmin(admin.ModelAdmin):
 
 
 # Register your models here.
-
-
+admin.site.register(Budget)
+admin.site.register(SalaryPeriod)
 admin.site.register(Expense, ExpenseAdmin)
