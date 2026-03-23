@@ -1,4 +1,4 @@
-#!/workspaces/expense-tracker-system-backend/django-expense-tracker-backend/venv/bin/python
+#!/workspaces/expense-tracker-system-backend/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
