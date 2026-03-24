@@ -18,6 +18,7 @@ class ExpenseTrackerTests(APITestCase):
         self.access_token = str(refresh.access_token)
 
         self.salary_period = SalaryPeriod.objects.create(
+            user=self.user,
             month=3,
             year=2026,
             total_salary=2500.00
@@ -58,6 +59,7 @@ class ExpenseTrackerTests(APITestCase):
         self.authenticate()
 
         budget = Budget.objects.create(
+            user=self.user,
             name="Transport",
             total_amount="100.00",
             month=3,
@@ -84,6 +86,7 @@ class ExpenseTrackerTests(APITestCase):
         self.authenticate()
 
         expense = Expense.objects.create(
+            user=self.user,
             category="BILLS",
             title="Phone Bill",
             amount="30.00",
