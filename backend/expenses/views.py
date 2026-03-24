@@ -3,8 +3,6 @@ from rest_framework import viewsets, permissions
 from .serializers import ExpenseSerializer, SalaryPeriodSerializer, BudgetSerializer
 from .models import Expense, SalaryPeriod, Budget
 
-
-# Create your views here.
 class BudgetView(viewsets.ModelViewSet):
     serializer_class = BudgetSerializer
     permission_classes = [permissions.IsAuthenticated]

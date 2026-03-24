@@ -3,7 +3,6 @@ from django.conf import settings
 from django.contrib.auth.models import User
 
 
-# Create your models here.
 class Budget(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=250)
@@ -25,7 +24,7 @@ class SalaryPeriod(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        unique_together = ('month', 'year')
+        unique_together = ('user','month', 'year')
 
     def __str__(self):
         return f"{self.month}/{self.year} - £{self.total_salary}"
