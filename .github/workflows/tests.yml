@@ -1,14 +1,16 @@
-name: Django Tests
+name: Django CI
 
 on:
   push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: backend
 
     steps:
       - name: Checkout code
@@ -17,19 +19,15 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r backend/requirements.txt
+          pip install -r requirements.txt
 
       - name: Run migrations
-        run: |
-          cd backend
-          python manage.py migrate
+        run: python manage.py migrate
 
       - name: Run tests
-        run: |
-          cd backend
-          python manage.py test
+        run: python manage.py test
