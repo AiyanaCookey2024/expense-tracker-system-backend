@@ -1,9 +1,3 @@
-# python3 -m venv venv 
-source venv/bin/activate
-cd backend
-pip install -r requirements.txt
-python manage.py runserver 
-
 # Expense Tracker API (Backend)
 
 ## Overview
@@ -70,15 +64,14 @@ Automated tests were written to validate:
 
 ## Setup Instructions
 
-### 1. Change the directory to backend 
+### 1. Create and activate a virtual enviornment 
+```bash
+python3 -m venv venv 
+source venv/bin/activate
+```
+### 2. Change the directory to backend 
 ```bash
 cd backend
-```
-
-### 2. Create a virtual enviornment 
-```bash
-python -m venv venv
-venv\Scripts\activate
 ```
 
 ### 3. Install dependencies
