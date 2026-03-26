@@ -52,7 +52,7 @@ This separation improves maintainability, scalability, and testability.
 ### Password Reset via Token
 A token-based password reset system was implemented to enhance security and simulate real-world application behaviour.
 
-### API endpoints are protected with JWT authentication, so direct browser access without the token with return a 401 error. Backend functionality was demonstrated through Django admin, automated tests, and authenticated API requests.
+API endpoints are protected with JWT authentication, so direct browser access without the token with return a 401 error. Backend functionality was demonstrated through Django admin, automated tests, and authenticated API requests.
 
 ### Testing Strategy
 Automated tests were written to validate:
@@ -101,8 +101,8 @@ python manage.py test
 ### 8. CI/CD 
 ### Github Actions used to automate testing:
 
-### - Runs on every push and pull request 
-### - Installs dependencies
-### - Executes test suite
+- Runs on every push and pull request 
+- Installs dependencies
+- Executes test suite
 
 
